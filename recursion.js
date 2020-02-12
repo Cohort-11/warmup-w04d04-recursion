@@ -31,9 +31,20 @@ const factorial = function(num){
 
 
 const fibonacci = function(num){
-    if(num == 1 || num == 2){ 
+
+    // Exception cases in fibonacci
+    if(num<0){
+    return "fibonacci only accepts zero and higher integers"
+    }
+
+    else if(num == 0){
+    return 0
+    }
+
+    else if(num == 1 || num == 2){ 
         return 1;
     }
+
     return fibonacci(num-1) + fibonacci(num-2);
 }
 
